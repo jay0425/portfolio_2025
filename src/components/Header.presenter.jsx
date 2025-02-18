@@ -1,13 +1,13 @@
-import * as S from './Header.styles.jsx';
+import * as S from './Header.styles.js';
 
 const Header = () => {
   return (
     <>
-      <header>
-        <h1 id="logo">
+      <S.Header>
+        <S.Logo>
           <a href="#">JAEHEE</a>
-        </h1>
-        <nav id="logo-nav">
+        </S.Logo>
+        <S.Nav id="logo-nav">
           <h3>
             <a href="#intro">Intro</a>
           </h3>
@@ -20,8 +20,8 @@ const Header = () => {
           <h3>
             <a href="#about-me">AboutMe</a>
           </h3>
-        </nav>
-      </header>
+        </S.Nav>
+      </S.Header>
     </>
   );
 };
