@@ -1,20 +1,18 @@
 import './App.css';
 
-import Header from './components/Header.presenter.jsx';
-
-// --------------------------------
-
 import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel, Keyboard, A11y } from 'swiper/modules';
 
 import styled from 'styled-components';
 
-import './App.css';
+import GlobalStyle from './styles/GlobalStyles.js';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
 import 'swiper/css/mousewheel';
+
+import Header from './components/Header.presenter.jsx';
 
 import Intro from './pages/Intro.presenter.jsx';
 import Skill from './pages/Skill.presenter.jsx';
@@ -27,6 +25,7 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
       <div className="App">
         <Header swiperRef={swiperRef} pageNum={pageNum} />
         <StyledSwiper
