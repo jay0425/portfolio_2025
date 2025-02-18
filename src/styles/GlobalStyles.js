@@ -1,13 +1,15 @@
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const Main = styled.main`
+const GlobalStyle = createGlobalStyle`
+main{
   width: 100%;
-  padding: 0 10rem;
-`;
-export const MiddleTitle = styled.h2`
-  font-size: 50px;
+  padding: 0 10rem;}
+
+  h2{
+  font-size: 50px;}
+
+  section{
+  padding-top: 6rem;}
 `;
 
-export const Section = styled.section`
-  padding-top: 6rem;
-`;
+export default GlobalStyle;

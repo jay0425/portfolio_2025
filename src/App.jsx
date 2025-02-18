@@ -6,7 +6,7 @@ import { Pagination, Mousewheel, Keyboard, A11y } from 'swiper/modules';
 
 import styled from 'styled-components';
 
-// import GlobalStyle from './styles/GlobalStyles.js';
+import GlobalStyle from './styles/GlobalStyles.js';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
       <div className="App">
         <Header swiperRef={swiperRef} pageNum={pageNum} />
         <StyledSwiper
