@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <S.Header>
         <S.Logo>
-          <a href="#">JAEHEE</a>
+          <a href="#intro">JAEHEE</a>
         </S.Logo>
         <S.Nav id="logo-nav">
           <h3>

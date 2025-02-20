@@ -31,9 +31,9 @@ const AboutMe = () => {
               <S.AboutMeIcon>
                 <FontAwesomeIcon icon={faPhone} size="3x" />
               </S.AboutMeIcon>
-              <div onClick="document.location.href='tel:전화번호'">
+              <a href="tel:01066015240">
                 <p>010-6601-5240</p>
-              </div>
+              </a>
             </li>
             <li>
               <S.AboutMeIcon>
