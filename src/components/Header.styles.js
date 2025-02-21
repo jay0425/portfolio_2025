@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  background-color: lightgray;
-  padding: 1rem 10rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: lightgray; */
+  padding: 1rem 10.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

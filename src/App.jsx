@@ -76,4 +76,8 @@ const StyledSwiper = styled(Swiper)`
     }
   }
 `;
-const StyledSwiperSlide = styled(SwiperSlide)``;
+const StyledSwiperSlide = styled(SwiperSlide)`
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 10rem;
+`;
