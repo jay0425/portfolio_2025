@@ -1,11 +1,14 @@
+import * as S from './Intro.styles.js';
+import photo from '../assets/images/photo.jpeg';
+
 const Intro = () => {
   return (
     <>
-      <section id="intro">
+      <S.Intro id="intro">
         <h2>INTRO</h2>
 
         <div id="intro-div">
-          <img src="assets/images/photo.jpeg" alt="프로필 이미지" />
+          <img src={photo} alt="프로필 이미지" />
 
           <h3>
             <span id="intro-first-div">
@@ -22,7 +25,7 @@ const Intro = () => {
             </span>
           </h3>
         </div>
-      </section>
+      </S.Intro>
     </>
   );
 };
