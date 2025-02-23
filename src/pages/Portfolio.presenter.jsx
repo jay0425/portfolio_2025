@@ -108,9 +108,6 @@ const Portfolio = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 4 },
             }}
-            onInit={(swiper) => {
-              console.log('Swiper 초기화됨!', swiper);
-            }}
           >
             {portfolioData.map((item, index) => (
               <SwiperSlide key={index}>

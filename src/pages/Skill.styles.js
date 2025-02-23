@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const SkillContainer = styled.div`
   display: flex;
@@ -30,6 +39,7 @@ export const SkillUl = styled.ul`
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
     &:hover svg {
       opacity: 0.3;
@@ -39,22 +49,21 @@ export const SkillUl = styled.ul`
 `;
 
 export const ModalContent = styled.div`
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 65%;
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background-color: white;
   padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 8px;
-  width: 200px;
+  width: 250px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 
-  h3 {
-    margin-bottom: 10px;
-  }
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
 
-  p {
-    margin-bottom: 20px;
+  &.show {
+    animation: ${fadeInUp} 0.8s ease-out forwards;
   }
 `;

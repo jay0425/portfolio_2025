@@ -38,17 +38,18 @@ const Skill = () => {
           <S.SkillUl>
             {skills.map((skill, index) => (
               <li key={index} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
-                <FontAwesomeIcon icon={skill.icon} size="3x" color={skill.color} />
+                <FontAwesomeIcon icon={skill.icon} size="4x" color={skill.color} />
                 <p>{skill.name}</p>
-                {hoveredIndex === index && (
-                  <S.ModalContent>
-                    <h3>{skill.name}</h3>
-                    <p>{skill.description}</p>
-                  </S.ModalContent>
-                )}
               </li>
             ))}
           </S.SkillUl>
+
+          {hoveredIndex !== null && (
+            <S.ModalContent className="show">
+              <h3>{skills[hoveredIndex].name}</h3>
+              <p>{skills[hoveredIndex].description}</p>
+            </S.ModalContent>
+          )}
         </S.SkillContainer>
       </section>
     </>
