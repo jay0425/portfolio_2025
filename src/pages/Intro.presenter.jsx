@@ -12,7 +12,7 @@ const Intro = () => {
 
             <h3>
               <span id="intro-first-div">
-                <strong>새로운 도전</strong>을 좋아하는 프론트엔드 개발자 김재희 입니다.
+                <strong>새로운 도전</strong>을 좋아하는 프론트엔드 개발 지망생 김재희 입니다.
               </span>
               <br />
               <span>
