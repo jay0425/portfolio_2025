@@ -32,7 +32,7 @@ export const SkillUl = styled.ul`
     position: relative;
 
     &:hover svg {
-      opacity: 0.7;
+      opacity: 0.3;
       transition: opacity 0.3s ease;
     }
   }
