@@ -40,16 +40,16 @@ const Skill = () => {
               <li key={index} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
                 <FontAwesomeIcon icon={skill.icon} size="4x" color={skill.color} />
                 <p>{skill.name}</p>
+
+                {hoveredIndex === index && (
+                  <S.ModalContent className="show">
+                    <h3>{skill.name}</h3>
+                    <p>{skill.description}</p>
+                  </S.ModalContent>
+                )}
               </li>
             ))}
           </S.SkillUl>
-
-          {hoveredIndex !== null && (
-            <S.ModalContent className="show">
-              <h3>{skills[hoveredIndex].name}</h3>
-              <p>{skills[hoveredIndex].description}</p>
-            </S.ModalContent>
-          )}
         </S.SkillContainer>
       </section>
     </>

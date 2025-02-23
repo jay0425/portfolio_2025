@@ -49,8 +49,8 @@ export const SkillUl = styled.ul`
 `;
 
 export const ModalContent = styled.div`
-  position: fixed;
-  top: 65%;
+  position: absolute;
+  top: 100%;
   left: 50%;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.24);
