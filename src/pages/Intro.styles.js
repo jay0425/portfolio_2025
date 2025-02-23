@@ -6,21 +6,11 @@ export const Intro = styled.section`
   justify-content: space-between;
   position: relative;
 
-  div {
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 5rem;
-  }
-
   h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* margin-left: 25rem; */
 
     strong {
       font-size: 200%;
@@ -54,5 +44,14 @@ export const Intro = styled.section`
 
   img {
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+`;
+
+export const IntroWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 75vw;
 `;

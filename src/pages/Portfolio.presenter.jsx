@@ -13,6 +13,10 @@ import jaeflix from '../assets/images/jaeflix.png';
 import hm from '../assets/images/h&m.png';
 import todolist from '../assets/images/todolist.png';
 
+import prevArrow from '../assets/images/arrow-left.svg';
+import nextArrow from '../assets/images/arrow-right.svg';
+import { useRef } from 'react';
+
 const portfolioData = [
   {
     title: 'YUMMY',
@@ -74,57 +78,76 @@ const portfolioData = [
 ];
 
 const Portfolio = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <>
       <section id="portfolio">
         <h2>PORTFOLIO</h2>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={20}
-          slidesPerView={1} // 기본 1개
-          navigation
-          pagination={{ clickable: true }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
-          }}
-        >
-          {portfolioData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <S.ContainerContent>
-                <S.Box>
-                  <S.Front>
-                    <h4>{item.title}</h4>
-                    <img src={item.image} alt={`${item.title} 프로젝트 이미지`} />
-                  </S.Front>
-                  <S.Back>
-                    <S.BackWrapper>
-                      <S.BackTitles>
-                        <h4>{item.title}</h4>
-                        <h6>{item.description}</h6>
-                        {item.contribution && <h6>기여도 {item.contribution}%</h6>}
-                      </S.BackTitles>
-                      <S.BackHr />
-                      <ul>
-                        {item.skills.map((skill, idx) => (
-                          <li key={idx}>{skill}</li>
-                        ))}
-                      </ul>
-                      <p>{item.details}</p>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        <span>LINK</span>
-                      </a>
-                      <a href={item.github} target="_blank" rel="noopener noreferrer">
-                        <span>GITHUB</span>
-                      </a>
-                    </S.BackWrapper>
-                  </S.Back>
-                </S.Box>
-              </S.ContainerContent>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+
+        <S.CustomSwiperButtonPrev ref={prevRef}>
+          <img src={prevArrow} alt="Previous" />
+        </S.CustomSwiperButtonPrev>
+        <S.CustomSwiperButtonNext ref={nextRef}>
+          <img src={nextArrow} alt="Next" />
+        </S.CustomSwiperButtonNext>
+
+        <div className="container">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            }}
+            onInit={(swiper) => {
+              console.log('Swiper 초기화됨!', swiper);
+            }}
+          >
+            {portfolioData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <S.ContainerContent>
+                  <S.Box>
+                    <S.Front>
+                      <h4>{item.title}</h4>
+                      <img src={item.image} alt={`${item.title} 프로젝트 이미지`} />
+                    </S.Front>
+                    <S.Back>
+                      <S.BackWrapper>
+                        <S.BackTitles>
+                          <h4>{item.title}</h4>
+                          <h6>{item.description}</h6>
+                          {item.contribution && <h6>기여도 {item.contribution}%</h6>}
+                        </S.BackTitles>
+                        <S.BackHr />
+                        <ul>
+                          {item.skills.map((skill, idx) => (
+                            <li key={idx}>{skill}</li>
+                          ))}
+                        </ul>
+                        <p>{item.details}</p>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                          <span>LINK</span>
+                        </a>
+                        <a href={item.github} target="_blank" rel="noopener noreferrer">
+                          <span>GITHUB</span>
+                        </a>
+                      </S.BackWrapper>
+                    </S.Back>
+                  </S.Box>
+                </S.ContainerContent>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </section>
     </>
   );

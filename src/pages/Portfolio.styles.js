@@ -130,3 +130,35 @@ export const BackHr = styled.hr`
 `;
 
 export const SkillItem = styled.li``;
+
+export const CustomSwiperButtonPrev = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  left: 1px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const CustomSwiperButtonNext = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  right: -1px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
