@@ -77,13 +77,13 @@ export const BackWrapper = styled.div`
 
   ul {
     display: flex;
-    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.2rem;
     padding: 0;
     margin: 0;
     list-style: none;
-    width: 100%; /* 부모 요소 크기에 맞춤 */
+    width: 100%;
 
     li {
       text-align: center;
