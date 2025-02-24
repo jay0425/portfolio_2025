@@ -2,8 +2,8 @@ import { styled } from 'styled-components';
 
 export const ContainerContent = styled.div`
   perspective: 1000px;
-  width: 300px;
-  height: 400px;
+  height: 610px;
+
   text-align: center;
   font-size: 1rem;
   display: flex;
@@ -19,8 +19,8 @@ export const ContainerContent = styled.div`
 `;
 
 export const Box = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 290px;
+  height: 460px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
