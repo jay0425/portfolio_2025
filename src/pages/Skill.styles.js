@@ -50,18 +50,22 @@ export const SkillUl = styled.ul`
 
 export const ModalContent = styled.div`
   position: absolute;
-  top: 100%;
+  top: 60%;
   left: 50%;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.24);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 8px;
-  width: 250px;
+  width: 30%;
   text-align: center;
   z-index: 1000;
 
   opacity: 0;
   transform: translateX(-50%) translateY(10px);
+
+  p {
+    font-size: 1.5rem;
+  }
 
   &.show {
     animation: ${fadeInUp} 0.8s ease-out forwards;
