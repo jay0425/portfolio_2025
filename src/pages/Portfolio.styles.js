@@ -139,7 +139,7 @@ export const CustomSwiperButtonPrev = styled.div`
   width: 40px;
   height: 40px;
   cursor: pointer;
-  left: 1px;
+  left: 190px;
 
   img {
     width: 100%;
@@ -155,7 +155,7 @@ export const CustomSwiperButtonNext = styled.div`
   width: 40px;
   height: 40px;
   cursor: pointer;
-  right: -1px;
+  right: 185px;
 
   img {
     width: 100%;
