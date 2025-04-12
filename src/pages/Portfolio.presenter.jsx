@@ -22,7 +22,6 @@ const portfolioData = [
     title: 'YUMMY',
     image: yummy,
     description: 'React App 그룹 프로젝트',
-    contribution: 16,
     skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Redux', 'Netlify'],
     details: `- 현재 위치 기반 디저트 카페를 추천해주는 사이트입니다. <br />
               - 메인페이지의 카드를 클릭하거나 맵에서 카페명을 클릭할 시 이동되는 디테일 페이지를 담당하였습니다. <br />
@@ -36,7 +35,6 @@ const portfolioData = [
     title: 'GEPPETTO',
     image: geppetto,
     description: 'React 그룹 프로젝트',
-    contribution: 25,
     skills: ['Vite', 'HTML5', 'CSS3', 'TailwindCSS', 'JavaScript', 'React', 'Zustand'],
     details: `- 동물 커뮤니티를 주제로 한 게시판 사이트입니다. <br />
               - 메인 페이지에의 추천 콘텐츠를 swiper로 구현했습니다.<br />
@@ -49,7 +47,6 @@ const portfolioData = [
     title: 'TIVING',
     image: tiving,
     description: 'SCSS 그룹 프로젝트',
-    contribution: 25,
     skills: ['HTML5', 'CSS3', 'SCSS', 'Netlify'],
     details: `- tiving UI를 클론 코딩한 웹페이지 입니다.<br />
               - sass를 사용하여 반응형 웹 UI(모바일, 탭, 데스크탑)를 구현을 하였습니다. <br />
@@ -142,7 +139,6 @@ const Portfolio = () => {
                         <S.BackTitles>
                           <h4>{item.title}</h4>
                           <h6>{item.description}</h6>
-                          {item.contribution && <h6>기여도 {item.contribution}%</h6>}
                         </S.BackTitles>
                         <S.BackHr />
                         <ul>
