@@ -19,15 +19,15 @@ export const ContainerContent = styled.div`
 `;
 
 export const Box = styled.div`
-  width: 290px;
-  height: 460px;
+  width: 400px;
+  height: 600px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
 
-  ${ContainerContent}:hover & {
+  /* ${ContainerContent}:hover & {
     transform: rotateY(180deg);
-  }
+  } */
 `;
 
 export const Front = styled.div`
@@ -51,7 +51,7 @@ export const Back = styled.div`
   position: absolute;
   backface-visibility: hidden;
   background: #f8f8f8;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
   border: 1px solid #ddd;
   border-radius: 10px;
   display: flex;
@@ -126,20 +126,31 @@ export const BackTitles = styled.div`
 `;
 
 export const BackHr = styled.hr`
-  margin: 1rem 0 0 0;
+  margin: 1rem 0;
 `;
 
-export const SkillItem = styled.li``;
+export const Overview = styled.p`
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 10px 0;
+  color: rgb(56, 137, 175);
+  text-align: left;
+`;
+
+export const Details = styled.p`
+  line-height: 1.45;
+  text-align: left;
+`;
 
 export const CustomSwiperButtonPrev = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  left: 190px;
+  left: 140px;
 
   img {
     width: 100%;
@@ -152,10 +163,10 @@ export const CustomSwiperButtonNext = styled.div`
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  right: 185px;
+  right: 140px;
 
   img {
     width: 100%;
