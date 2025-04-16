@@ -26,7 +26,7 @@ const portfolioData = [
     details: `
                   - 웹 애플리케이션의 흐름과 백엔드와의 데이터 통신 방식에 대한 전반적인 이해를 위해 개인 프로젝트로 풀스택 CRUD 게시판을 구현하였습니다.<br /><br />
                   - 프론트엔드는 React와 Tailwind CSS 기반으로 구성하였으며, 특히 빠른 UI 구성과 커스터마이징을 위해 DaisyUI 컴포넌트 라이브러리를 도입하였습니다.<br /><br />
-                  - 직원 정보를 등록(Create), 조회(Read), 수정(Update), 삭제(Delete)할 수 있는 기능을 구현했으며, 각각의 동작은 백엔드와 통신하고 PostgreSQL에 저장됩니다.<br /><br />
+                  - 직원 정보를 등록(Create), 조회(Read), 수정(Update), 삭제(Delete)할 수 있는 기능을 구현했으며, 각각의 동작은 백엔드와 통신하고 PostgreSQL에 반영됩니다.<br /><br />
                   - 이 프로젝트를 통해 프론트엔드 개발자로서 백엔드의 동작 원리를 이해하고, 클라이언트와 서버 간의 데이터 흐름을 구조적으로 설계하는 경험을 쌓을 수 있었습니다.<br />`,
     comment: '배포 대신 시연 영상을 제작하여 전달드립니다.',
     link: 'https://www.youtube.com/watch?v=Hj9FltPZpcw',
