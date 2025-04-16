@@ -71,3 +71,20 @@ export const ModalContent = styled.div`
     animation: ${fadeInUp} 0.8s ease-out forwards;
   }
 `;
+
+export const ProgressBar = styled.div`
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 15px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+
+  .bar {
+    height: 100%;
+    background-color: #4caf50; /* 기본 색상 */
+    width: ${({ level }) => level}%;
+    transition: width 0.5s ease-in-out;
+  }
+`;
