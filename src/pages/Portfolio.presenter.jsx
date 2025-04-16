@@ -29,6 +29,7 @@ const portfolioData = [
                   - 디테일 페이지에서는 선택한 카페의 정보와 함께 관련 블로그 글을 확인할 수 있도록 Kakao 검색 Open API를 활용하여 데이터를 불러왔습니다.<br />
                   - 블로그 결과는 부드러운 흐름과 데이터 요청 최적화를 위해 react-infinite-scroller 라이브러리를 사용해 커서 기반의 무한 스크롤 방식으로 구현하였으며 마지막 페이지 도달 시 안내 메시지를 노출시켰습니다.<br />
                   - 디테일 페이지 UI를 반응형으로 제작하여 데스크탑과 모바일 디스플레이에서도 최적화된 사용자 경험을 제공했습니다.<br />`,
+    comment: '현재 토큰 만료로 인하여 해당 웹사이트를 확인할 수 없게 되었습니다.',
     link: 'https://yummy-web.netlify.app/',
     github: 'https://github.com/jay0425/react-team11-project',
   },
@@ -133,7 +134,7 @@ const Portfolio = () => {
             breakpoints={{
               320: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
+              1024: { slidesPerView: 3 },
             }}
           >
             {portfolioData.map((item, index) => (
@@ -146,24 +147,27 @@ const Portfolio = () => {
                     </S.Front>
                     <S.Back>
                       <S.BackWrapper>
-                        <S.BackTitles>
-                          <h4>{item.title}</h4>
-                          <h6>{item.description}</h6>
-                        </S.BackTitles>
-                        <S.BackHr />
-                        <ul>
-                          {item.skills.map((skill, idx) => (
-                            <li key={idx}>{skill}</li>
-                          ))}
-                        </ul>
-                        <S.Overview>{item.overview}</S.Overview>
-                        <S.Details dangerouslySetInnerHTML={{ __html: item.details }}></S.Details>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">
-                          <span>LINK</span>
-                        </a>
-                        <a href={item.github} target="_blank" rel="noopener noreferrer">
-                          <span>GITHUB</span>
-                        </a>
+                        <S.CardContent>
+                          <S.BackTitles>
+                            <h4>{item.title}</h4>
+                            <h6>{item.description}</h6>
+                          </S.BackTitles>
+                          <S.BackHr />
+                          <ul>
+                            {item.skills.map((skill, idx) => (
+                              <li key={idx}>{skill}</li>
+                            ))}
+                          </ul>
+                          <S.Overview>{item.overview}</S.Overview>
+                          <S.Details dangerouslySetInnerHTML={{ __html: item.details }}></S.Details>
+                          <S.Comment>{item?.comment}</S.Comment>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer">
+                            <span>LINK</span>
+                          </a>
+                          <a href={item.github} target="_blank" rel="noopener noreferrer">
+                            <span>GITHUB</span>
+                          </a>
+                        </S.CardContent>
                       </S.BackWrapper>
                     </S.Back>
                   </S.Box>

@@ -19,8 +19,8 @@ export const ContainerContent = styled.div`
 `;
 
 export const Box = styled.div`
-  width: 400px;
-  height: 600px;
+  width: 350px;
+  height: 500px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
@@ -60,11 +60,17 @@ export const Back = styled.div`
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  overflow-y: auto;
 `;
 
 export const BackWrapper = styled.div`
   width: 90%;
   transform: scale(0.9);
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
   h4 {
     color: #2980b9;
@@ -119,6 +125,21 @@ export const BackWrapper = styled.div`
   }
 `;
 
+export const CardContent = styled.div`
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+  }
+`;
+
 export const BackTitles = styled.div`
   display: flex;
   align-items: center;
@@ -140,6 +161,10 @@ export const Overview = styled.p`
 export const Details = styled.p`
   line-height: 1.45;
   text-align: left;
+`;
+
+export const Comment = styled.p`
+  color: red;
 `;
 
 export const CustomSwiperButtonPrev = styled.div`
